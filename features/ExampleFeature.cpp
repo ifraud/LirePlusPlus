@@ -1,6 +1,7 @@
 
 
 #include <features/ExampleFeature.h>
+#include <utils/easylogging++.h>
 
 #include <memory>
 #include <iostream>
@@ -20,7 +21,7 @@ ExampleFeature::Private::Private()
 ExampleFeature::ExampleFeature()
   : p_(new Private())
 {
-
+	LOG(INFO) << "Initializing Example Feature";
 }
 
 ExampleFeature::~ExampleFeature()
@@ -28,5 +29,5 @@ ExampleFeature::~ExampleFeature()
 
 void ExampleFeature::extract()
 {
-  std::cout<<"blah blah\n";
+  
 }
